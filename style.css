@@ -1,0 +1,114 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    text-align: center;
+    background:rgb(225, 210, 253);
+    font-family: poppins;
+}
+
+.container{
+
+    padding-top: 300px;
+    border: 6px solid black;
+    background: #89cff0
+}
+.ball{
+display: inline-block;
+width: 80px;
+height: 80px;
+border: 2px solid black;
+border-radius: 100%;
+background: pink;
+box-shadow: 10px 15px 30px 5px white inset;
+animation-iteration-count:calc(5);
+animation-duration: 3s;
+animation-timing-function:ease-in-out;
+padding-top: 22px;
+
+} 
+
+
+.ball:nth-of-type(odd) {
+    animation-name: bounce1;
+
+}
+.ball:nth-of-type(even) {
+    animation-name: bounce2;
+
+}
+
+
+
+@keyframes bounce1 {
+    10%   { transform: translateY(0); background:yellow; }
+    30%  { transform: translateY(-200px); background:rgb(51, 255, 0);}
+    50%  { transform: translateY(0); background:rgb(0, 119, 255); }
+    70% { transform: translateY(200px);background:rgb(174, 0, 255); }
+    90% { transform: translateY(0);background:rgb(255, 0, 191); }
+   
+
+}
+@keyframes bounce2 {
+    0%   { transform: translateY(0); background:yellow; }
+    30%  { transform: translateY(200px); background:rgb(51, 255, 0);  }
+    50%  { transform: translateY(0); background:rgb(0, 119, 255); }
+    70% { transform: translateY(-200px);background:rgb(174, 0, 255); }
+    90% { transform: translateY(0);background:rgb(255, 0, 191); }
+
+}
+
+/* 2nd animation */
+.title{
+
+    padding-top: 300px;
+    padding-bottom: 250px;
+    border: 6px solid black;
+
+}
+.title div {
+    display: inline-block;
+    font-size: 50px;
+    font-weight: bold;
+   
+    margin: 15px;
+    padding: 15px;
+}
+
+.first:hover {
+   
+    transform:scale(1.5);
+    transition: 1s;
+}
+
+.second:hover{
+    transform: translateY(50px);
+}
+
+.third {
+    border: 5px solid rgb(10, 211, 238);
+    border-radius: 80px;
+    transform: rotate(0.5turn);
+}
+
+.third:hover{
+    
+    transform: skewY(10deg);
+}
+
+.fourth{
+    animation-name: shake ;
+    animation-duration: 0.5s; 
+    animation-iteration-count: infinite;
+    color:blue;
+}
+
+@keyframes shake {
+    0% { transform: translate(0, 0) rotate(0); color: rgb(255, 0, 191);  }
+  25% { transform: translate(15px, 15px) rotate(10deg); color: rgb(174, 0, 255); }
+  50% { transform: translate(0, 0) rotate(0deg); color: rgb(0, 119, 255); }
+  75% { transform: translate(-15px, 15px) rotate(-10deg); color: rgb(51, 255, 0);  }
+  100% { transform: translate(0, 0) rotate(0deg); color:yellow;}
+    }
